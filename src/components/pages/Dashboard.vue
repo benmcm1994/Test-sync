@@ -21,7 +21,17 @@ export default {
     }
   },
   mounted(){
-      
+    axios.get('http://127.0.0.1:8000/api/users', {
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem('token')
+      }
+    })
+    .then(response => {
+      this.users = response.data
+      console.log(data)
+    }) .catch (error => {
+
+    })
   }
 }
 </script>
