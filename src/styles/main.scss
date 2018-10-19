@@ -1,0 +1,38 @@
+// Your variables file where you override the
+//  default Vuetify variables.
+//@import 'variables';
+// Then import vuetify-scss.
+
+@import url("https://fonts.googleapis.com/css?family=Niramit");
+
+html,
+body {
+  font-family: "Niramit", sans-serif;
+}
+
+body {
+  font-family: "Niramit", sans-serif;
+}
+
+#app {
+  font-family: "Niramit", sans-serif;
+}
+
+/* mouse over link */
+a {
+    color: #67C8FF;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #67C8FF;
+    font-weight: 600;
+}
+
+/* selected link */
+a:active {
+    color: #67C8FF;
+}
+
+@import '~vuetify-scss'; // Ensure you are using stylus-loader
