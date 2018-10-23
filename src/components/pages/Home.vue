@@ -1,6 +1,9 @@
 <template>
       <v-container fluid>
         <v-layout>
+          <v-btn color="primary" dark large router-link to="/dashboard">Users</v-btn>
+          <v-btn color="secondary" dark large router-link to="/about">Signals</v-btn>
+          <v-btn color="error" dark large router-link to="/contact">Accounts</v-btn>
           <p>Count = {{count}}</p>
           <button @click="increment">PLUS UNO</button>
           <Table/>
@@ -9,7 +12,6 @@
 </template>
 
 <script>
-import CardFilter from "../CardFilter.vue";
 import Table from "../Table.vue";
 
 export default {

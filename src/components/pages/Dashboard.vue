@@ -5,7 +5,8 @@
     <h5>User list</h5>
         <ul>
         <li v-for="user in users">
-        <p>{{ user.name }}</p>
+        <h5>{{ user.name }}</h5>
+        <p>{{ user.email }}</p>
       </li>
         </ul>
   </div>
@@ -16,22 +17,18 @@ import axios from "axios";
 
 export default {
   data(){
-    return {
-      users: []
+    return{
+      
     }
   },
-  mounted(){
-    axios.get('http://127.0.0.1:8000/api/users', {
-      headers: {
-        Authorization: 'Bearer ' + localStorage.getItem('token')
-      }
-    })
-    .then(response => {
-      this.users = response.data
-      console.log(data)
-    }) .catch (error => {
-
-    })
+  created(){
+    this.$store.dispatch('users/loadUsers')
+    console.log(this.$store)
+  },
+  computed:{
+    users(){
+      return this.$store.getters['users/getUsers']
+    }
   }
 }
 </script>

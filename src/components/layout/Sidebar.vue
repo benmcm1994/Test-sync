@@ -60,6 +60,15 @@
         </v-list-tile-title>
       </v-list-tile>
       <v-divider></v-divider>
+            <v-divider></v-divider>
+            <v-list-tile router-link to="/register">
+        <v-list-tile-action class="pa-0 mr-0">
+          <v-icon class="pa-1">wifi_tethering</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-title class="tileText">
+          Register
+        </v-list-tile-title>
+      </v-list-tile>
     </v-list>
   </v-navigation-drawer>
 </template>

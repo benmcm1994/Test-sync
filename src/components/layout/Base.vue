@@ -16,7 +16,10 @@ export default {
     Navbar,
     Sidebar,
     Content
-  }
+  },
+  computed : {
+      isLoggedIn : function(){ return this.$store.getters.isLoggedIn}
+    }
 }
 </script>
 
